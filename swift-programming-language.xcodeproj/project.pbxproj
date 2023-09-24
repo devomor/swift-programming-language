@@ -11,6 +11,7 @@
 		EB2F0BE02ABFF962007EF3B9 /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F0BDF2ABFF962007EF3B9 /* Variable.swift */; };
 		EB2F0BE22ABFFE2B007EF3B9 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F0BE12ABFFE2B007EF3B9 /* Array.swift */; };
 		EB2F0BE42AC00765007EF3B9 /* operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F0BE32AC00765007EF3B9 /* operator.swift */; };
+		EB2F0BE62AC00C41007EF3B9 /* StringsAndCharecter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F0BE52AC00C41007EF3B9 /* StringsAndCharecter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		EB2F0BDF2ABFF962007EF3B9 /* Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
 		EB2F0BE12ABFFE2B007EF3B9 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		EB2F0BE32AC00765007EF3B9 /* operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = operator.swift; sourceTree = "<group>"; };
+		EB2F0BE52AC00C41007EF3B9 /* StringsAndCharecter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringsAndCharecter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				EB2F0BDF2ABFF962007EF3B9 /* Variable.swift */,
 				EB2F0BE12ABFFE2B007EF3B9 /* Array.swift */,
 				EB2F0BE32AC00765007EF3B9 /* operator.swift */,
+				EB2F0BE52AC00C41007EF3B9 /* StringsAndCharecter.swift */,
 			);
 			path = "swift-programming-language";
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 			files = (
 				EB2F0BE22ABFFE2B007EF3B9 /* Array.swift in Sources */,
 				EB2F0BE42AC00765007EF3B9 /* operator.swift in Sources */,
+				EB2F0BE62AC00C41007EF3B9 /* StringsAndCharecter.swift in Sources */,
 				EB2F0BD72ABF400A007EF3B9 /* main.swift in Sources */,
 				EB2F0BE02ABFF962007EF3B9 /* Variable.swift in Sources */,
 			);
