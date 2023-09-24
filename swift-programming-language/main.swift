@@ -2,9 +2,11 @@
 
 import Foundation
 
-let label = "The width is "
-let width = 94
-let widthLabel = label + String(width)
-
+// You can now use the variables and code defined in Variable.swift
 print(widthLabel)
+print("Hello, world")
+print(appleSummary)
+print(fruitSummary)
+print(quotation)
+
 
