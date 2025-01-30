@@ -340,4 +340,268 @@ var x = 5, y = 10
 swapValues(&x, &y)
 print("x: \(x), y: \(y)")
 ```
-#### This outline provides a structured approach to learning Swift, with practical examples for each concept. Let me know if you need further clarification or additional examples!
+
+# 1. Basic Syntax and Variables
+```
+import Foundation
+
+// Declaring variables and constants
+var greeting = "Hello, Swift!"
+let pi = 3.14159
+
+// Printing to the console
+print(greeting)
+print("The value of pi is \(pi)")
+
+// Type annotation
+var age: Int = 25
+var name: String = "John Doe"
+
+print("\(name) is \(age) years old.")
+``` 
+# 2. Control Flow (if-else, switch)
+``` 
+import Foundation
+
+// If-else statement
+let temperature = 30
+
+if temperature > 25 {
+    print("It's hot outside!")
+} else if temperature > 15 {
+    print("It's warm outside.")
+} else {
+    print("It's cold outside.")
+}
+
+// Switch statement
+let dayOfWeek = "Monday"
+
+switch dayOfWeek {
+case "Monday":
+    print("Start of the work week.")
+case "Friday":
+    print("Last day of the work week.")
+default:
+    print("It's a regular day.")
+}
+``` 
+# 3. Functions
+``` 
+import Foundation
+
+// Defining a function
+func greet(person: String) -> String {
+    return "Hello, \(person)!"
+}
+
+// Calling a function
+let message = greet(person: "Alice")
+print(message)
+
+// Function with multiple parameters and return values
+func addNumbers(a: Int, b: Int) -> Int {
+    return a + b
+}
+
+let sum = addNumbers(a: 5, b: 3)
+print("The sum is \(sum)")
+``` 
+# 4. Collections (Arrays, Dictionaries)
+``` 
+import Foundation
+
+// Array example
+var fruits = ["Apple", "Banana", "Cherry"]
+fruits.append("Date")  // Adding an element
+print("Fruits: \(fruits)")
+
+// Accessing elements
+let firstFruit = fruits[0]
+print("The first fruit is \(firstFruit)")
+
+// Dictionary example
+var personInfo = ["name": "John", "age": "30", "city": "New York"]
+personInfo["age"] = "31"  // Updating a value
+print("Person Info: \(personInfo)")
+
+// Accessing dictionary values
+if let age = personInfo["age"] {
+    print("Age: \(age)")
+}
+``` 
+# 5. Optionals and Optional Binding
+``` 
+import Foundation
+
+// Optional variable
+var optionalString: String? = "Hello"
+
+// Optional binding
+if let unwrappedString = optionalString {
+    print("Unwrapped string: \(unwrappedString)")
+} else {
+    print("The string is nil")
+}
+
+// Forced unwrapping (use with caution)
+let forcedString = optionalString!
+print("Forced unwrapped string: \(forcedString)")
+
+// Nil coalescing operator
+let defaultValue = "Default Value"
+let result = optionalString ?? defaultValue
+print("Result: \(result)")
+``` 
+# 6. Classes and Structures
+``` 
+import Foundation
+
+// Defining a class
+class Person {
+    var name: String
+    var age: Int
+    
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+    
+    func describe() -> String {
+        return "\(name) is \(age) years old."
+    }
+}
+
+// Creating an instance of the class
+let person = Person(name: "Alice", age: 30)
+print(person.describe())
+
+// Defining a structure
+struct Point {
+    var x: Double
+    var y: Double
+}
+
+// Creating an instance of the structure
+var point = Point(x: 10.0, y: 20.0)
+print("Point is at (\(point.x), \(point.y))")
+``` 
+# 7. Enumerations
+``` 
+import Foundation
+
+// Defining an enumeration
+enum CompassDirection {
+    case north
+    case south
+    case east
+    case west
+}
+
+// Using an enumeration
+var direction = CompassDirection.north
+
+switch direction {
+case .north:
+    print("Heading north")
+case .south:
+    print("Heading south")
+case .east:
+    print("Heading east")
+case .west:
+    print("Heading west")
+}
+``` 
+# 8. Closures
+``` 
+import Foundation
+
+// Defining a closure
+let greetClosure = { (name: String) -> String in
+    return "Hello, \(name)!"
+}
+
+// Calling a closure
+let greetingMessage = greetClosure("Bob")
+print(greetingMessage)
+
+// Using a closure with a function
+func performOperation(a: Int, b: Int, operation: (Int, Int) -> Int) -> Int {
+    return operation(a, b)
+}
+
+let result = performOperation(a: 5, b: 3) { $0 + $1 }
+print("Result of operation: \(result)")
+``` 
+# 9. Error Handling
+``` 
+import Foundation
+
+// Defining an error type
+enum NetworkError: Error {
+    case badURL
+    case noData
+}
+
+// Function that throws an error
+func fetchData(from urlString: String) throws -> String {
+    guard let url = URL(string: urlString) else {
+        throw NetworkError.badURL
+    }
+    
+    // Simulate fetching data
+    if urlString == "https://example.com" {
+        return "Data fetched successfully"
+    } else {
+        throw NetworkError.noData
+    }
+}
+
+// Handling errors
+do {
+    let data = try fetchData(from: "https://example.com")
+    print(data)
+} catch NetworkError.badURL {
+    print("Invalid URL")
+} catch NetworkError.noData {
+    print("No data received")
+} catch {
+    print("An unexpected error occurred")
+}
+``` 
+# 10. Protocols and Extensions
+``` 
+import Foundation
+
+// Defining a protocol
+protocol Describable {
+    func describe() -> String
+}
+
+// Conforming to a protocol
+class Animal: Describable {
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    func describe() -> String {
+        return "This is an animal named \(name)."
+    }
+}
+
+// Using the protocol
+let dog = Animal(name: "Buddy")
+print(dog.describe())
+
+// Extending a type
+extension Int {
+    func squared() -> Int {
+        return self * self
+    }
+}
+
+let number = 4
+print("\(number) squared is \(number.squared())")
+``` 
